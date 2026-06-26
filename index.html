@@ -498,6 +498,20 @@
   }
   .barchart-footnote strong { color: var(--navy); }
 
+  .estimate-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #FEF3E2;
+    border: 1px solid #FBD896;
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1.6rem;
+  }
+  .estimate-banner svg { flex-shrink: 0; margin-top: 2px; }
+  .estimate-banner span { font-size: 0.82rem; color: #92400E; line-height: 1.6; }
+  .estimate-banner strong { color: #78350F; }
+
   /* ============ DETAILED COST TABLE ============ */
   .detail-table-wrap { margin-top: 2.5rem; }
   .detail-table {
@@ -757,10 +771,15 @@
 
     <!-- BAR CHART: Full cost composition, Months 1-4 (validation) vs Months 5-7 (automation) -->
     <div class="barchart-card">
+      <div class="estimate-banner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+        <span><strong>Estimate, not a guarantee.</strong> Months 5–7 are an illustrative projection of how automation could affect the retainer — not a calculated or contractually committed figure. Actual savings depend on the automation scope agreed at that stage, and may turn out higher or lower than shown here.</span>
+      </div>
+
       <div class="barchart-head">
         <div>
-          <h4>Monthly Cost Composition — Validation Period vs. Post-Automation</h4>
-          <div class="sub">Each bar shows where the monthly retainer is actually spent. From month 5, automation begins reducing the agency-dependent line items.</div>
+          <h4>Monthly Cost Composition — Validation Period vs. Estimated Post-Automation</h4>
+          <div class="sub">Each bar shows where the monthly retainer is actually spent. From month 5, automation is projected to begin reducing the agency-dependent line items.</div>
         </div>
         <div class="barchart-legend">
           <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#0B1F3A;"></span>Strategy &amp; Management</div>
@@ -774,9 +793,9 @@
       <div class="barchart-phase-row">
         <div></div>
         <div class="barchart-phase-labels">
-          <div class="phase-tag-group">Validation Period — Full Outsourcing</div>
+          <div class="phase-tag-group">Validation Period — Confirmed Pricing</div>
           <div class="phase-divider-spacer"></div>
-          <div class="phase-tag-group automation" style="grid-column: span 3;">Post-Automation</div>
+          <div class="phase-tag-group automation" style="grid-column: span 3;">Post-Automation — Estimated</div>
         </div>
       </div>
 
@@ -840,7 +859,7 @@
 
           <!-- Month 5 — Strategy 5000 / Media 5000 / SMM 1500 / Content 1000 / Ads 3500 = 16000 -->
           <div class="bar-column">
-            <div class="bar-total-label lower">€16,000</div>
+            <div class="bar-total-label lower">~€16,000</div>
             <div class="bar-stack" style="height:200px;">
               <div class="bar-seg" style="height:31.3%; background:#0B1F3A;"></div>
               <div class="bar-seg" style="height:31.3%; background:#2563EB;"></div>
@@ -851,7 +870,7 @@
           </div>
           <!-- Month 6 — Strategy 4500 / Media 4000 / SMM 1000 / Content 750 / Ads 4000 = 14250 -->
           <div class="bar-column">
-            <div class="bar-total-label lower">€14,250</div>
+            <div class="bar-total-label lower">~€14,250</div>
             <div class="bar-stack" style="height:178px;">
               <div class="bar-seg" style="height:31.6%; background:#0B1F3A;"></div>
               <div class="bar-seg" style="height:28.1%; background:#2563EB;"></div>
@@ -862,7 +881,7 @@
           </div>
           <!-- Month 7 — Strategy 4000 / Media 3500 / SMM 750 / Content 500 / Ads 4500 = 13250 -->
           <div class="bar-column">
-            <div class="bar-total-label lower">€13,250</div>
+            <div class="bar-total-label lower">~€13,250</div>
             <div class="bar-stack" style="height:166px;">
               <div class="bar-seg" style="height:30.2%; background:#0B1F3A;"></div>
               <div class="bar-seg" style="height:26.4%; background:#2563EB;"></div>
@@ -888,7 +907,7 @@
       </div>
 
       <div class="barchart-footnote">
-        <strong>Reading the automation effect:</strong> Social Media Management and Content Production are the two line items automation targets first — both shrink steadily from month 5 onward as AI-driven workflows take over routine posting, captioning, and editing tasks. Strategy and Media Buying stay largely intact, since campaign judgement and account oversight remain human-led. The freed-up budget is partially reallocated into Meta Ad Budget, increasing paid reach while still lowering the total monthly retainer.
+        <strong>Reading the automation effect:</strong> Social Media Management and Content Production are the two line items automation is expected to target first — both projected to shrink steadily from month 5 onward as AI-driven workflows take over routine posting, captioning, and editing tasks. Strategy and Media Buying are assumed to stay largely intact, since campaign judgement and account oversight remain human-led. The freed-up budget is shown partially reallocated into Meta Ad Budget. <strong>These month 5–7 figures are a working estimate to illustrate direction and scale — not a fixed quote.</strong> The confirmed numbers will follow once automation scope is defined together, at the end of the validation period.
       </div>
     </div>
 
@@ -944,61 +963,61 @@
       </table>
     </div>
 
-    <div style="margin-top:1rem; margin-bottom:0.5rem; font-size:0.78rem; font-weight:700; color:var(--blue); letter-spacing:0.04em; text-transform:uppercase;">After Automation — Months 5 to 7 (Indicative)</div>
+    <div style="margin-top:1rem; margin-bottom:0.5rem; font-size:0.78rem; font-weight:700; color:#B45309; letter-spacing:0.04em; text-transform:uppercase;">Estimated — Months 5 to 7, Pending Automation Scope</div>
     <div class="detail-table-wrap" style="margin-top:0;">
       <table class="detail-table">
         <thead>
           <tr>
             <th>Line Item</th>
-            <th>Month 5</th>
-            <th>Month 6</th>
-            <th>Month 7</th>
+            <th>Month 5 (Est.)</th>
+            <th>Month 6 (Est.)</th>
+            <th>Month 7 (Est.)</th>
             <th class="num">Change vs. Month 4</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Strategy &amp; Management</td>
-            <td class="num">€5,000</td>
-            <td class="num">€4,500</td>
-            <td class="num">€4,000</td>
+            <td class="num">~€5,000</td>
+            <td class="num">~€4,500</td>
+            <td class="num">~€4,000</td>
             <td class="num" style="color:var(--green);">− €1,000</td>
           </tr>
           <tr>
             <td>Media Buying Agency</td>
-            <td class="num">€5,000</td>
-            <td class="num">€4,000</td>
-            <td class="num">€3,500</td>
+            <td class="num">~€5,000</td>
+            <td class="num">~€4,000</td>
+            <td class="num">~€3,500</td>
             <td class="num" style="color:var(--green);">− €1,500</td>
           </tr>
           <tr>
             <td>Social Media Management</td>
-            <td class="num">€1,500</td>
-            <td class="num">€1,000</td>
-            <td class="num">€750</td>
+            <td class="num">~€1,500</td>
+            <td class="num">~€1,000</td>
+            <td class="num">~€750</td>
             <td class="num" style="color:var(--green);">− €2,250</td>
           </tr>
           <tr>
             <td>Content Production</td>
-            <td class="num">€1,000</td>
-            <td class="num">€750</td>
-            <td class="num">€500</td>
+            <td class="num">~€1,000</td>
+            <td class="num">~€750</td>
+            <td class="num">~€500</td>
             <td class="num" style="color:var(--green);">− €2,000</td>
           </tr>
           <tr>
             <td>Meta Ad Budget</td>
-            <td class="num">€3,500</td>
-            <td class="num">€4,000</td>
-            <td class="num">€4,500</td>
+            <td class="num">~€3,500</td>
+            <td class="num">~€4,000</td>
+            <td class="num">~€4,500</td>
             <td class="num" style="color:var(--navy);">+ €1,500</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td>Total Monthly Retainer</td>
-            <td class="num">€16,000</td>
-            <td class="num">€14,250</td>
-            <td class="num">€13,250</td>
+            <td>Total Monthly Retainer (Estimated)</td>
+            <td class="num">~€16,000</td>
+            <td class="num">~€14,250</td>
+            <td class="num">~€13,250</td>
             <td class="num" style="color:var(--green);">− €5,250 by Month 7</td>
           </tr>
         </tfoot>
@@ -1050,10 +1069,10 @@
       <div class="amt">€26,000</div>
     </div>
     <div class="future-card">
-      <span class="ftag">Ongoing Effect — Indicative</span>
+      <span class="ftag">Ongoing Effect — Estimate</span>
       <h4>Effect on Monthly Retainer</h4>
-      <p>Based on the projection above, the retainer is expected to fall from €18,500 to approximately €13,250 by month 7 — a reduction of roughly 28%. Figures are indicative until automation scope is finalised.</p>
-      <div class="amt tbd">↓ €18,500 → ~€13,250 / month</div>
+      <p>Based on the working estimate above, the retainer is projected to fall from €18,500 to roughly €13,250 by month 7 — a reduction of about 28%. This is a planning assumption, not a fixed figure — the confirmed reduction will be set once automation scope is agreed.</p>
+      <div class="amt tbd">↓ €18,500 → ~€13,250 / month (est.)</div>
     </div>
   </div>
 
