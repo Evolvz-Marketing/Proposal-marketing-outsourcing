@@ -473,6 +473,37 @@
     margin-bottom: 8px;
   }
   .bar-total-label.lower { color: var(--green); }
+  .bar-total-label.estimate {
+    color: var(--ink-soft);
+    font-weight: 700;
+    font-size: 0.78rem;
+  }
+
+  .bar-stack.estimate-stack {
+    background: repeating-linear-gradient(
+      135deg,
+      #DCE3EF,
+      #DCE3EF 6px,
+      #EEF1F6 6px,
+      #EEF1F6 12px
+    );
+    border: 1.5px dashed #B9C3D6;
+    border-bottom: none;
+  }
+
+  .tbd-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 0.78rem;
+    color: var(--green);
+    background: #DCFCE7;
+    border-radius: 100px;
+    padding: 3px 11px;
+    margin-bottom: 8px;
+  }
 
   .barchart-xaxis {
     display: grid;
@@ -769,12 +800,12 @@
       </div>
     </div>
 
-    <!-- BAR CHART: Full cost composition, Months 1-4 -->
+    <!-- BAR CHART: Full cost composition, Months 1-4, with estimated decline for months 5-7 -->
     <div class="barchart-card">
       <div class="barchart-head">
         <div>
-          <h4>Monthly Cost Composition — Months 1 to 4</h4>
-          <div class="sub">Each bar shows where the monthly retainer is actually spent across the four-month validation period.</div>
+          <h4>Monthly Cost Composition — Validation Period &amp; Expected Decline</h4>
+          <div class="sub">Each bar shows where the monthly retainer is actually spent. From month 5, the retainer is expected to decrease as automation reduces dependency on outsourced parties — the exact percentage will be confirmed once automation scope is agreed.</div>
         </div>
         <div class="barchart-legend">
           <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#0B1F3A;"></span>Strategy &amp; Management</div>
@@ -785,11 +816,20 @@
         </div>
       </div>
 
+      <div class="barchart-phase-row">
+        <div></div>
+        <div class="barchart-phase-labels" style="grid-template-columns: repeat(4, 1fr) 18px repeat(3, 1fr);">
+          <div class="phase-tag-group">Confirmed Pricing — Months 1–4</div>
+          <div class="phase-divider-spacer"></div>
+          <div class="phase-tag-group automation" style="grid-column: span 3;">Expected Decline — Estimate Only</div>
+        </div>
+      </div>
+
       <div class="barchart-area">
         <div class="barchart-yaxis">
           <span>€20k</span><span>€15k</span><span>€10k</span><span>€5k</span><span>€0</span>
         </div>
-        <div class="barchart-bars" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="barchart-bars" style="grid-template-columns: repeat(4, 1fr) 18px repeat(3, 1fr);">
           <div class="barchart-gridline" style="bottom:0%;"></div>
           <div class="barchart-gridline" style="bottom:25%;"></div>
           <div class="barchart-gridline" style="bottom:50%;"></div>
@@ -840,16 +880,42 @@
               <div class="bar-seg" style="height:16.3%; background:#60A5FA;"></div>
             </div>
           </div>
+
+          <div class="chart-divider"></div>
+
+          <!-- Month 5 — estimated decline, exact % TBD -->
+          <div class="bar-column">
+            <div class="tbd-pill">↓ TBD%</div>
+            <div class="bar-stack estimate-stack" style="height:200px;"></div>
+          </div>
+          <!-- Month 6 — estimated decline, exact % TBD -->
+          <div class="bar-column">
+            <div class="tbd-pill">↓ TBD%</div>
+            <div class="bar-stack estimate-stack" style="height:170px;"></div>
+          </div>
+          <!-- Month 7 — estimated decline, exact % TBD -->
+          <div class="bar-column">
+            <div class="tbd-pill">↓ TBD%</div>
+            <div class="bar-stack estimate-stack" style="height:145px;"></div>
+          </div>
         </div>
       </div>
       <div class="barchart-xaxis">
         <div></div>
-        <div class="barchart-xlabels" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="barchart-xlabels" style="grid-template-columns: repeat(4, 1fr) 18px repeat(3, 1fr);">
           <div>Month 1</div>
           <div>Month 2</div>
           <div>Month 3</div>
           <div>Month 4</div>
+          <div class="xspacer"></div>
+          <div>Month 5</div>
+          <div>Month 6</div>
+          <div>Month 7</div>
         </div>
+      </div>
+
+      <div class="barchart-footnote">
+        <strong>Reading the decline:</strong> From month 5, Social Media Management and Content Production are the line items automation is expected to target first — both are projected to shrink as AI-driven workflows take over routine posting and content tasks. Strategy and Media Buying are assumed to stay largely intact, since campaign judgement and account oversight remain human-led. <strong>The exact percentage decrease is not yet quantified</strong> — it depends on the automation scope agreed once the validation period is complete. The shape above illustrates the expected direction only.
       </div>
     </div>
 
@@ -906,6 +972,10 @@
     </div>
   </div>
 </section>
+<!-- ============ DECISION BANNER ============ -->
+<div class="decision-banner">
+  <div class="eyebrow"><span class="num"></span>Why This Period Matters</div>
+
 <!-- ============ FUTURE PHASE ============ -->
 <section class="section section-bg" id="future">
   <div class="eyebrow"><span class="num">05</span>Beyond Month 4 — If We Continue</div>
@@ -935,8 +1005,8 @@
           <th>Task</th>
           <th style="width:11%;">Automatable</th>
           <th style="width:16%;">Automation Type</th>
-          <th class="num" style="width:13%;">Time Saved</th>
-          <th class="num" style="width:14%;">Build Cost</th>
+          <th class="num" style="width:13%;">Time Saved (Est.)</th>
+          <th class="num" style="width:14%;">Build Cost (€)</th>
         </tr>
       </thead>
       <tbody>
@@ -1031,11 +1101,9 @@
   </div>
 </section>
 
-<!-- ============ DECISION BANNER ============ -->
-<div class="decision-banner">
-  <div class="eyebrow"><span class="num"></span>Why This Period Matters</div>
+
   <h2>By the end of month four, the model will be validated on real performance data.</h2>
-  <p>Each outsourcing partner will have completed a full operating cycle by that point. Performance data on sales, subscriber retention, and acquisition cost will determine whether the model is scaled, adjusted, or paused — based on evidence rather than assumptions.</p>
+  <p>Each outsourcing partner will have completed a full operating cycle by that point. Performance data on sales, subscriber retention, and acquisition cost will determine whether the model is scaled, adjusted, or paused — based on evidence rather than assumptions. <strong style="color:#fff;">Only once the model is validated does it make sense to invest in automation</strong> — at that point, the focus shifts to automating the proven workflows in order to bring the monthly retainer down.</p>
 </div>
 
 
