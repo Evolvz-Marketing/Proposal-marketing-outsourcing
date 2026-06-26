@@ -582,8 +582,8 @@
     <li><a href="#timeline">Timeline</a></li>
     <li><a href="#setup">Setup</a></li>
     <li><a href="#retainer">Retainer</a></li>
-    <li><a href="#investment">Investment</a></li>
     <li><a href="#future">What's Next</a></li>
+    <li><a href="#investment">Investment</a></li>
   </ul>
 </nav>
 
@@ -769,17 +769,12 @@
       </div>
     </div>
 
-    <!-- BAR CHART: Full cost composition, Months 1-4 (validation) vs Months 5-7 (automation) -->
+    <!-- BAR CHART: Full cost composition, Months 1-4 -->
     <div class="barchart-card">
-      <div class="estimate-banner">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
-        <span><strong>Estimate, not a guarantee.</strong> Months 5–7 are an illustrative projection of how automation could affect the retainer — not a calculated or contractually committed figure. Actual savings depend on the automation scope agreed at that stage, and may turn out higher or lower than shown here.</span>
-      </div>
-
       <div class="barchart-head">
         <div>
-          <h4>Monthly Cost Composition — Validation Period vs. Estimated Post-Automation</h4>
-          <div class="sub">Each bar shows where the monthly retainer is actually spent. From month 5, automation is projected to begin reducing the agency-dependent line items.</div>
+          <h4>Monthly Cost Composition — Months 1 to 4</h4>
+          <div class="sub">Each bar shows where the monthly retainer is actually spent across the four-month validation period.</div>
         </div>
         <div class="barchart-legend">
           <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#0B1F3A;"></span>Strategy &amp; Management</div>
@@ -790,20 +785,11 @@
         </div>
       </div>
 
-      <div class="barchart-phase-row">
-        <div></div>
-        <div class="barchart-phase-labels">
-          <div class="phase-tag-group">Validation Period — Confirmed Pricing</div>
-          <div class="phase-divider-spacer"></div>
-          <div class="phase-tag-group automation" style="grid-column: span 3;">Post-Automation — Estimated</div>
-        </div>
-      </div>
-
       <div class="barchart-area">
         <div class="barchart-yaxis">
           <span>€20k</span><span>€15k</span><span>€10k</span><span>€5k</span><span>€0</span>
         </div>
-        <div class="barchart-bars">
+        <div class="barchart-bars" style="grid-template-columns: repeat(4, 1fr);">
           <div class="barchart-gridline" style="bottom:0%;"></div>
           <div class="barchart-gridline" style="bottom:25%;"></div>
           <div class="barchart-gridline" style="bottom:50%;"></div>
@@ -854,60 +840,16 @@
               <div class="bar-seg" style="height:16.3%; background:#60A5FA;"></div>
             </div>
           </div>
-
-          <div class="chart-divider"></div>
-
-          <!-- Month 5 — Strategy 5000 / Media 5000 / SMM 1500 / Content 1000 / Ads 3500 = 16000 -->
-          <div class="bar-column">
-            <div class="bar-total-label lower">~€16,000</div>
-            <div class="bar-stack" style="height:200px;">
-              <div class="bar-seg" style="height:31.3%; background:#0B1F3A;"></div>
-              <div class="bar-seg" style="height:31.3%; background:#2563EB;"></div>
-              <div class="bar-seg" style="height:9.4%; background:#93C5FD;"></div>
-              <div class="bar-seg" style="height:6.2%; background:#BFDBFE;"></div>
-              <div class="bar-seg" style="height:21.8%; background:#60A5FA;"></div>
-            </div>
-          </div>
-          <!-- Month 6 — Strategy 4500 / Media 4000 / SMM 1000 / Content 750 / Ads 4000 = 14250 -->
-          <div class="bar-column">
-            <div class="bar-total-label lower">~€14,250</div>
-            <div class="bar-stack" style="height:178px;">
-              <div class="bar-seg" style="height:31.6%; background:#0B1F3A;"></div>
-              <div class="bar-seg" style="height:28.1%; background:#2563EB;"></div>
-              <div class="bar-seg" style="height:7.0%; background:#93C5FD;"></div>
-              <div class="bar-seg" style="height:5.3%; background:#BFDBFE;"></div>
-              <div class="bar-seg" style="height:28.0%; background:#60A5FA;"></div>
-            </div>
-          </div>
-          <!-- Month 7 — Strategy 4000 / Media 3500 / SMM 750 / Content 500 / Ads 4500 = 13250 -->
-          <div class="bar-column">
-            <div class="bar-total-label lower">~€13,250</div>
-            <div class="bar-stack" style="height:166px;">
-              <div class="bar-seg" style="height:30.2%; background:#0B1F3A;"></div>
-              <div class="bar-seg" style="height:26.4%; background:#2563EB;"></div>
-              <div class="bar-seg" style="height:5.7%; background:#93C5FD;"></div>
-              <div class="bar-seg" style="height:3.8%; background:#BFDBFE;"></div>
-              <div class="bar-seg" style="height:34.0%; background:#60A5FA;"></div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="barchart-xaxis">
         <div></div>
-        <div class="barchart-xlabels">
+        <div class="barchart-xlabels" style="grid-template-columns: repeat(4, 1fr);">
           <div>Month 1</div>
           <div>Month 2</div>
           <div>Month 3</div>
           <div>Month 4</div>
-          <div class="xspacer"></div>
-          <div>Month 5</div>
-          <div>Month 6</div>
-          <div>Month 7</div>
         </div>
-      </div>
-
-      <div class="barchart-footnote">
-        <strong>Reading the automation effect:</strong> Social Media Management and Content Production are the two line items automation is expected to target first — both projected to shrink steadily from month 5 onward as AI-driven workflows take over routine posting, captioning, and editing tasks. Strategy and Media Buying are assumed to stay largely intact, since campaign judgement and account oversight remain human-led. The freed-up budget is shown partially reallocated into Meta Ad Budget. <strong>These month 5–7 figures are a working estimate to illustrate direction and scale — not a fixed quote.</strong> The confirmed numbers will follow once automation scope is defined together, at the end of the validation period.
       </div>
     </div>
 
@@ -962,104 +904,13 @@
         </tfoot>
       </table>
     </div>
-
-    <div style="margin-top:1rem; margin-bottom:0.5rem; font-size:0.78rem; font-weight:700; color:#B45309; letter-spacing:0.04em; text-transform:uppercase;">Estimated — Months 5 to 7, Pending Automation Scope</div>
-    <div class="detail-table-wrap" style="margin-top:0;">
-      <table class="detail-table">
-        <thead>
-          <tr>
-            <th>Line Item</th>
-            <th>Month 5 (Est.)</th>
-            <th>Month 6 (Est.)</th>
-            <th>Month 7 (Est.)</th>
-            <th class="num">Change vs. Month 4</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Strategy &amp; Management</td>
-            <td class="num">~€5,000</td>
-            <td class="num">~€4,500</td>
-            <td class="num">~€4,000</td>
-            <td class="num" style="color:var(--green);">− €1,000</td>
-          </tr>
-          <tr>
-            <td>Media Buying Agency</td>
-            <td class="num">~€5,000</td>
-            <td class="num">~€4,000</td>
-            <td class="num">~€3,500</td>
-            <td class="num" style="color:var(--green);">− €1,500</td>
-          </tr>
-          <tr>
-            <td>Social Media Management</td>
-            <td class="num">~€1,500</td>
-            <td class="num">~€1,000</td>
-            <td class="num">~€750</td>
-            <td class="num" style="color:var(--green);">− €2,250</td>
-          </tr>
-          <tr>
-            <td>Content Production</td>
-            <td class="num">~€1,000</td>
-            <td class="num">~€750</td>
-            <td class="num">~€500</td>
-            <td class="num" style="color:var(--green);">− €2,000</td>
-          </tr>
-          <tr>
-            <td>Meta Ad Budget</td>
-            <td class="num">~€3,500</td>
-            <td class="num">~€4,000</td>
-            <td class="num">~€4,500</td>
-            <td class="num" style="color:var(--navy);">+ €1,500</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Total Monthly Retainer (Estimated)</td>
-            <td class="num">~€16,000</td>
-            <td class="num">~€14,250</td>
-            <td class="num">~€13,250</td>
-            <td class="num" style="color:var(--green);">− €5,250 by Month 7</td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
   </div>
 </section>
-<section class="section" id="investment">
-  <div class="eyebrow"><span class="num">05</span>Total Investment</div>
-  <h2 class="headline">Total Required Investment</h2>
-  <p class="lede">Setup plus four months of retainer gives the full starting capital needed to launch, run, and validate the marketing engine before any scaling or automation decision.</p>
-
-  <div class="buildup">
-    <div class="buildup-card">
-      <div class="k">One-Time Setup</div>
-      <div class="v">€4,000</div>
-    </div>
-    <div class="buildup-op">+</div>
-    <div class="buildup-card">
-      <div class="k">€18,500 × 4 Months</div>
-      <div class="v">€74,000</div>
-    </div>
-    <div class="buildup-op">=</div>
-    <div class="buildup-card result">
-      <div class="k">Total Starting Capital</div>
-      <div class="v">€78,000</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DECISION BANNER ============ -->
-<div class="decision-banner">
-  <div class="eyebrow"><span class="num"></span>Why This Period Matters</div>
-  <h2>By the end of month four, the model will be validated on real performance data.</h2>
-  <p>Each outsourcing partner will have completed a full operating cycle by that point. Performance data on sales, subscriber retention, and acquisition cost will determine whether the model is scaled, adjusted, or paused — based on evidence rather than assumptions.</p>
-</div>
-
 <!-- ============ FUTURE PHASE ============ -->
-<section class="section" id="future">
-  <div class="eyebrow"><span class="num">06</span>Beyond Month 4 — If We Continue</div>
+<section class="section section-bg" id="future">
+  <div class="eyebrow"><span class="num">05</span>Beyond Month 4 — If We Continue</div>
   <h2 class="headline">Long-Term Automation Opportunity</h2>
-  <p class="lede">If the four-month test validates the model, the next step is automating parts of the work — which reduces dependency on certain outsourced parties and lowers the recurring retainer, as shown in the month 5–7 projection above. Not every task can be automated; the table below sets out exactly which ones can, and what each costs to build.</p>
+  <p class="lede">If the four-month test validates the model, the next step is automating parts of the work that don't require human judgement — which reduces dependency on certain outsourced parties and lowers the recurring retainer over time. Not every task can be automated; the table below sets out exactly which ones can, and what each costs to build. The actual scope — and the resulting effect on the monthly retainer — will be defined together once we reach that point, based on what the validation period shows is working.</p>
 
   <div class="future-shell">
     <div class="future-card">
@@ -1069,10 +920,10 @@
       <div class="amt">€26,000</div>
     </div>
     <div class="future-card">
-      <span class="ftag">Ongoing Effect — Estimate</span>
+      <span class="ftag">Ongoing Effect</span>
       <h4>Effect on Monthly Retainer</h4>
-      <p>Based on the working estimate above, the retainer is projected to fall from €18,500 to roughly €13,250 by month 7 — a reduction of about 28%. This is a planning assumption, not a fixed figure — the confirmed reduction will be set once automation scope is agreed.</p>
-      <div class="amt tbd">↓ €18,500 → ~€13,250 / month (est.)</div>
+      <p>Once automation is live, part of the outsourced workload shifts to automated systems — directly lowering the monthly retainer. The exact reduction depends on which tasks are automated and isn't quantified yet, but the direction is clear.</p>
+      <div class="amt tbd">↓ Lower Monthly Retainer — Exact Figure TBD</div>
     </div>
   </div>
 
@@ -1156,6 +1007,37 @@
     </table>
   </div>
 </section>
+
+<section class="section" id="investment">
+  <div class="eyebrow"><span class="num">06</span>Total Investment</div>
+  <h2 class="headline">Total Required Investment</h2>
+  <p class="lede">Setup plus four months of retainer gives the full starting capital needed to launch, run, and validate the marketing engine before any scaling or automation decision.</p>
+
+  <div class="buildup">
+    <div class="buildup-card">
+      <div class="k">One-Time Setup</div>
+      <div class="v">€4,000</div>
+    </div>
+    <div class="buildup-op">+</div>
+    <div class="buildup-card">
+      <div class="k">€18,500 × 4 Months</div>
+      <div class="v">€74,000</div>
+    </div>
+    <div class="buildup-op">=</div>
+    <div class="buildup-card result">
+      <div class="k">Total Starting Capital</div>
+      <div class="v">€78,000</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DECISION BANNER ============ -->
+<div class="decision-banner">
+  <div class="eyebrow"><span class="num"></span>Why This Period Matters</div>
+  <h2>By the end of month four, the model will be validated on real performance data.</h2>
+  <p>Each outsourcing partner will have completed a full operating cycle by that point. Performance data on sales, subscriber retention, and acquisition cost will determine whether the model is scaled, adjusted, or paused — based on evidence rather than assumptions.</p>
+</div>
+
 
 <footer>
   <p>Dutch Flower Club — Marketing Proposal</p>
