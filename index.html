@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dutch Flower Club — Marketing Proposal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --navy:       #0B1F3A;
+    --navy-soft:  #1E3A5F;
+    --blue:       #2563EB;
+    --blue-light: #DBEAFE;
+    --blue-pale:  #F0F5FF;
+    --ink:        #14181F;
+    --ink-soft:   #5B6472;
+    --line:       #E7EAF0;
+    --paper:      #FFFFFF;
+    --paper-dim:  #F7F9FC;
+    --green:      #16A34A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .display { font-family: 'Manrope', sans-serif; }
+
+  /* ============ NAV ============ */
+  nav {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 0 3rem;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-id { display:flex; align-items:center; gap:10px; font-weight:700; font-size:0.95rem; }
+  .nav-id .dot { width:9px; height:9px; border-radius:2px; background:var(--blue); }
+  .nav-links { display:flex; gap:2.2rem; list-style:none; }
+  .nav-links a { font-size:0.78rem; font-weight:600; color:var(--ink-soft); text-decoration:none; }
+  .nav-links a:hover { color:var(--blue); }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 6rem 3rem 5rem;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .hero-tag {
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:0.74rem; font-weight:600; letter-spacing:0.04em;
+    color: var(--blue);
+    background: var(--blue-pale);
+    border: 1px solid var(--blue-light);
+    padding: 7px 16px;
+    border-radius: 100px;
+    margin-bottom: 2.2rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    color: var(--navy);
+    max-width: 820px;
+  }
+  .hero h1 .accent { color: var(--blue); }
+  .hero-sub {
+    margin-top: 1.6rem;
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 600px;
+    line-height: 1.75;
+  }
+  .hero-bottom {
+    margin-top: 3.5rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+    padding-top: 2rem;
+  }
+  .hero-bottom-item .k { font-size:0.7rem; font-weight:600; color:var(--ink-soft); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:6px; }
+  .hero-bottom-item .v { font-weight:700; font-size:1.02rem; color: var(--navy); }
+
+  /* ============ SECTION SHELL ============ */
+  .section { padding: 5rem 3rem; max-width: 1180px; margin: 0 auto; }
+  .section-tight { padding-top: 3rem; }
+  .section-bg { background: var(--paper-dim); }
+  .section-bg-wide { background: var(--paper-dim); padding: 5rem 3rem; }
+  .section-bg-wide .section { padding: 0; max-width: 1180px; margin: 0 auto; }
+
+  .eyebrow {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 0.9rem; display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow .num { font-family:'Manrope',sans-serif; opacity:0.4; }
+
+  h2.headline {
+    font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 1.1rem;
+    max-width: 700px;
+  }
+  .lede { font-size: 1rem; color: var(--ink-soft); max-width: 620px; line-height: 1.75; margin-bottom: 2.6rem; }
+
+  /* ============ APPROACH CARDS (WHY OUTSOURCE) ============ */
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 850px) { .approach-grid { grid-template-columns: 1fr; } }
+  .approach-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.9rem;
+  }
+  .approach-icon {
+    width: 42px; height: 42px; border-radius: 10px;
+    background: var(--blue-pale);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom: 1.2rem; font-size: 1.2rem;
+  }
+  .approach-card h4 { font-size: 0.98rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+  .approach-card p { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.65; }
+
+  /* ============ TIMELINE — HORIZONTAL FLOW ============ */
+  .flow-track {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+  }
+  @media (max-width: 850px) { .flow-track { grid-template-columns: 1fr; } }
+
+  .flow-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1.8rem;
+    position: relative;
+  }
+  .flow-card.is-current {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 1px var(--blue);
+  }
+  .flow-step-num {
+    display:inline-flex; align-items:center; justify-content:center;
+    width: 30px; height: 30px; border-radius: 8px;
+    background: var(--navy); color:#fff; font-weight:700; font-size:0.85rem;
+    margin-bottom: 1.2rem;
+  }
+  .flow-card.is-current .flow-step-num { background: var(--blue); }
+  .flow-card h4 { font-size: 1.02rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+  .flow-card p { font-size: 0.83rem; color: var(--ink-soft); line-height: 1.65; }
+  .flow-month-label { font-size: 0.68rem; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 1.2rem; display:block; }
+
+  /* ============ WORK / SETUP TABLE ============ */
+  .work-list { margin-top: 2rem; display:flex; flex-direction:column; gap:0; }
+  .work-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 110px;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .work-row:first-child { border-top: 1px solid var(--line); }
+  @media (max-width: 700px) { .work-row { grid-template-columns: 1fr; gap: 0.5rem; } }
+
+  .work-tag {
+    display:inline-block; font-size:0.72rem; font-weight:700;
+    color: var(--blue); background: var(--blue-pale); border-radius:6px; padding: 4px 10px; width:fit-content;
+  }
+  .work-row .desc-title { font-weight: 600; font-size: 0.92rem; color: var(--ink); margin-bottom: 2px; }
+  .work-row .desc-sub { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; }
+  .work-row .phase-label { font-size: 0.78rem; font-weight: 600; color: var(--ink-soft); text-align:right; }
+  @media (max-width: 700px) { .work-row .phase-label { text-align:left; } }
+
+  .work-total-strip {
+    margin-top: 1.5rem;
+    display:flex; justify-content:space-between; align-items:center;
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+  }
+  .work-total-strip .label { color: rgba(255,255,255,0.7); font-size:0.85rem; font-weight:600; }
+  .work-total-strip .amount { color: #fff; font-size: 1.7rem; font-weight: 800; font-family:'Manrope',sans-serif; }
+
+  /* ============ RETAINER — DONUT + LEGEND ============ */
+  .retainer-shell {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 3.5rem;
+    margin-top: 2.5rem;
+    align-items: center;
+  }
+  @media (max-width: 850px) { .retainer-shell { grid-template-columns: 1fr; } }
+
+  .donut-wrap { position: relative; width: 280px; height: 280px; margin: 0 auto; }
+  .donut-center {
+    position: absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    text-align:center;
+  }
+  .donut-center .amt { font-family:'Manrope',sans-serif; font-weight:800; font-size:1.9rem; color:var(--navy); }
+  .donut-center .lbl { font-size:0.72rem; color:var(--ink-soft); font-weight:600; margin-top:2px; }
+
+  .legend-list { display:flex; flex-direction:column; gap: 1rem; }
+  .legend-row {
+    display:grid; grid-template-columns: 14px 1fr auto; align-items:center; gap: 12px;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .legend-row:last-child { border-bottom:none; }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 3px; }
+  .legend-name { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+  .legend-sub { font-size: 0.78rem; color: var(--ink-soft); margin-top:1px; }
+  .legend-amt { font-weight: 700; font-size: 0.98rem; color: var(--navy); font-family:'Manrope',sans-serif; white-space:nowrap; }
+
+  /* ============ INVESTMENT BUILD-UP ============ */
+  .buildup {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  .buildup-card {
+    flex: 1;
+    min-width: 180px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.6rem;
+    text-align: center;
+  }
+  .buildup-card .k { font-size: 0.72rem; font-weight: 600; color: var(--ink-soft); margin-bottom: 0.6rem; text-transform:uppercase; letter-spacing:0.04em; }
+  .buildup-card .v { font-family:'Manrope',sans-serif; font-weight:800; font-size:1.6rem; color: var(--navy); }
+  .buildup-op { font-size: 1.6rem; color: var(--blue); font-weight: 800; }
+  .buildup-card.result { background: var(--navy); border-color: var(--navy); }
+  .buildup-card.result .k { color: rgba(255,255,255,0.6); }
+  .buildup-card.result .v { color: #fff; }
+
+  /* ============ DECISION BANNER ============ */
+  .decision-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+    border-radius: 24px;
+    padding: 3.5rem 3rem;
+    margin: 0 3rem;
+    max-width: 1180px;
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+  }
+  .decision-banner .eyebrow { justify-content:center; color: #8AB4FF; }
+  .decision-banner h2 { color: #fff; font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight:800; max-width:700px; margin:0 auto 1rem; line-height:1.35; }
+  .decision-banner h2 .accent { color: #8AB4FF; }
+  .decision-banner p { color: rgba(255,255,255,0.65); max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.7; }
+
+  /* ============ FUTURE PHASE ============ */
+  .future-shell {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  @media (max-width: 850px) { .future-shell { grid-template-columns: 1fr; } }
+  .future-card {
+    border: 1px dashed #C7D2E5;
+    border-radius: 16px;
+    padding: 2rem;
+    background: var(--paper);
+  }
+  .future-card .ftag {
+    display:inline-block; font-size:0.68rem; font-weight:700; color: var(--ink-soft);
+    border: 1px solid var(--line); border-radius:100px; padding:3px 10px; margin-bottom:1rem;
+  }
+  .future-card h4 { font-size: 1rem; font-weight:700; color:var(--navy); margin-bottom:0.6rem; }
+  .future-card p { font-size: 0.85rem; color: var(--ink-soft); line-height:1.7; margin-bottom: 1.2rem; }
+  .future-card .amt { font-family:'Manrope',sans-serif; font-weight:800; font-size: 1.9rem; color: var(--blue); }
+  .future-card .amt.tbd { color: var(--green); font-size: 1.3rem; }
+
+  /* ============ AUTOMATION BREAKDOWN TABLE ============ */
+  .automation-table-wrap { margin-top: 2.5rem; }
+  .automation-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .automation-table thead th {
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.9rem 1.1rem;
+  }
+  .automation-table thead th.num { text-align: right; }
+  .automation-table tbody td {
+    padding: 0.9rem 1.1rem;
+    font-size: 0.84rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    vertical-align: top;
+  }
+  .automation-table tbody tr:last-child td { border-bottom: none; }
+  .automation-table .cat-label { font-weight: 600; color: var(--navy); }
+  .automation-table .task-sub { font-size: 0.78rem; color: var(--ink-soft); margin-top: 2px; }
+  .automation-table .num { text-align: right; font-weight: 700; font-family: 'Manrope', sans-serif; color: var(--navy); white-space: nowrap; }
+
+  .auto-flag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+  .auto-flag.yes { background: #DCFCE7; color: #15803D; }
+  .auto-flag.no { background: #F1F2F4; color: var(--ink-soft); }
+  .auto-flag.optional { background: var(--blue-pale); color: var(--blue); }
+
+  .automation-table tfoot td {
+    padding: 1rem 1.1rem;
+    font-weight: 800;
+    font-size: 0.88rem;
+    background: var(--paper-dim);
+    border-top: 2px solid var(--navy);
+    color: var(--navy);
+  }
+  .automation-table tfoot td.num { font-family: 'Manrope', sans-serif; font-size: 1rem; }
+
+  /* ============ BAR CHART — MONTHLY COST BREAKDOWN ============ */
+  .barchart-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-top: 2.5rem;
+  }
+  .barchart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  .barchart-head h4 { font-size: 1rem; font-weight: 700; color: var(--navy); }
+  .barchart-head .sub { font-size: 0.82rem; color: var(--ink-soft); margin-top: 4px; }
+  .barchart-legend { display: flex; gap: 1.3rem; flex-wrap: wrap; }
+  .barchart-legend-item { display: flex; align-items: center; gap: 7px; font-size: 0.78rem; color: var(--ink-soft); font-weight: 500; }
+  .barchart-legend-swatch { width: 11px; height: 11px; border-radius: 3px; }
+
+  .barchart-phase-row {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    margin-bottom: 0.6rem;
+  }
+  .barchart-phase-labels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 1fr repeat(3, 1fr);
+    gap: 1.4rem;
+    padding: 0 0.6rem;
+  }
+  .phase-tag-group {
+    grid-column: span 4;
+    text-align: center;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--paper-dim);
+    border-radius: 6px;
+    padding: 4px 0;
+  }
+  .phase-tag-group.automation {
+    color: var(--blue);
+    background: var(--blue-pale);
+  }
+  .phase-divider-spacer { grid-column: span 1; }
+
+  .barchart-area {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 0;
+  }
+
+  .barchart-yaxis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    padding-bottom: 28px;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .barchart-yaxis span { font-size: 0.7rem; color: var(--ink-soft); transform: translateY(50%); }
+
+  .barchart-bars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 18px repeat(3, 1fr);
+    gap: 1.4rem;
+    align-items: end;
+    height: 300px;
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    padding: 0 0.6rem;
+  }
+  .barchart-gridline {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--line);
+    opacity: 0.6;
+  }
+  .chart-divider {
+    height: 100%;
+    border-left: 1px dashed #C7D2E5;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bar-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 2;
+  }
+  .bar-stack {
+    width: 100%;
+    max-width: 78px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+  }
+  .bar-seg { width: 100%; }
+  .bar-total-label {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 0.84rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .bar-total-label.lower { color: var(--green); }
+
+  .barchart-xaxis {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+  }
+  .barchart-xlabels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 18px repeat(3, 1fr);
+    gap: 1.4rem;
+    padding: 0 0.6rem;
+    margin-top: 0.8rem;
+  }
+  .barchart-xlabels div { text-align: center; font-size: 0.76rem; font-weight: 600; color: var(--ink-soft); }
+  .barchart-xlabels .xspacer { visibility: hidden; }
+
+  .barchart-footnote {
+    margin-top: 1.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+  .barchart-footnote strong { color: var(--navy); }
+
+  /* ============ DETAILED COST TABLE ============ */
+  .detail-table-wrap { margin-top: 2.5rem; }
+  .detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .detail-table thead th {
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.95rem 1.2rem;
+  }
+  .detail-table thead th.num { text-align: right; }
+  .detail-table tbody td {
+    padding: 0.95rem 1.2rem;
+    font-size: 0.86rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .detail-table tbody td.num {
+    text-align: right;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+  }
+  .detail-table tbody tr:last-child td { border-bottom: none; }
+  .detail-table .row-type {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 6px;
+  }
+  .row-type.fixed { background: var(--blue-pale); color: var(--blue); }
+  .row-type.variable { background: #FEF3E2; color: #B45309; }
+  .detail-table tfoot td {
+    padding: 1.1rem 1.2rem;
+    font-weight: 800;
+    font-size: 0.92rem;
+    background: var(--paper-dim);
+    border-top: 2px solid var(--navy);
+    color: var(--navy);
+  }
+  .detail-table tfoot td.num { text-align: right; font-family: 'Manrope', sans-serif; font-size: 1.05rem; }
+
+  footer {
+    padding: 2.5rem 3rem; border-top: 1px solid var(--line);
+    display:flex; justify-content:space-between; max-width:1180px; margin:0 auto;
+  }
+  footer p { font-size: 0.78rem; color: var(--ink-soft); }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-id"><span class="dot"></span>Dutch Flower Club</div>
+  <ul class="nav-links">
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#retainer">Retainer</a></li>
+    <li><a href="#investment">Investment</a></li>
+    <li><a href="#future">What's Next</a></li>
+  </ul>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-tag">Marketing Proposal — Prepared for Jack &amp; John</div>
+  <h1>Marketing Outsourcing Proposal</h1>
+  <p class="hero-sub">A structured proposal for building and running the full marketing function of Dutch Flower Club through specialised outsourcing partners, managed under one point of internal oversight.</p>
+
+  <div class="hero-bottom">
+    <div class="hero-bottom-item"><div class="k">Engagement Length</div><div class="v">4-Month Validation Period</div></div>
+    <div class="hero-bottom-item"><div class="k">Structure</div><div class="v">Specialist Agencies, Managed In-House</div></div>
+    <div class="hero-bottom-item"><div class="k">Decision Point</div><div class="v">End of Month 4 — On Real Data</div></div>
+  </div>
+</section>
+
+<!-- ============ WHY OUTSOURCE ============ -->
+<section class="section section-tight" id="approach">
+  <div class="eyebrow"><span class="num">01</span>The Approach</div>
+  <h2 class="headline">Rationale for an Outsourced Model</h2>
+  <p class="lede">Running this properly is essentially two full-time roles worth of work — social, content, paid media, email, strategy, and reporting, all moving at once. Rather than hire and manage that directly, we bring in specialists who already do each discipline professionally, and keep tight oversight ourselves.</p>
+
+  <div class="approach-grid">
+    <div class="approach-card">
+      <div class="approach-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+      </div>
+      <h4>Speed to Specialist Quality</h4>
+      <p>Each function — paid media, content, social — goes to a party that already does this daily for other brands, instead of being learned from scratch in-house.</p>
+    </div>
+    <div class="approach-card">
+      <div class="approach-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+      </div>
+      <h4>One Point of Accountability</h4>
+      <p>Strategy, agency management, and reporting stay in-house. Every outsourced party answers to a single person tracking whether it's actually working.</p>
+    </div>
+    <div class="approach-card">
+      <div class="approach-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-5 3 3 5-7"/></svg>
+      </div>
+      <h4>Decisions on Data, Not Guesses</h4>
+      <p>By month four, every channel has run a full cycle. That's when we know — with real numbers — whether to scale, adjust, or stop.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section-bg-wide" id="timeline">
+  <div class="section">
+    <div class="eyebrow"><span class="num">02</span>The First Four Months</div>
+    <h2 class="headline">Four-Month Implementation Timeline</h2>
+    <p class="lede">Each month has one job. The next phase only starts once the previous one is actually done — this is deliberately sequential, not four months of parallel guessing.</p>
+
+    <div class="flow-track">
+      <div class="flow-card is-current">
+        <div class="flow-step-num">1</div>
+        <h4>Build &amp; Set Up</h4>
+        <p>Social channels, ad accounts, content production, and influencer outreach are all built from zero. Influencer sourcing alone is a real time investment.</p>
+        <span class="flow-month-label">Month 1</span>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step-num">2</div>
+        <h4>Bring In The Specialists</h4>
+        <p>Outsourcing partners come on board across social, paid media, and content — and get aligned to one shared strategy and brand.</p>
+        <span class="flow-month-label">Month 2</span>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step-num">3</div>
+        <h4>First Customers</h4>
+        <p>Focus shifts to acquiring the first subscribers — and keeping them, since this is a recurring subscription model. First real data starts coming in.</p>
+        <span class="flow-month-label">Month 3</span>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step-num">4</div>
+        <h4>Analyse &amp; Scale</h4>
+        <p>Month 3 data gets reviewed in full. Budget and strategy adjust based on what's actually working — this is where scaling decisions get made on evidence.</p>
+        <span class="flow-month-label">Month 4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SETUP WORK ============ -->
+<section class="section" id="setup">
+  <div class="eyebrow"><span class="num">03</span>Before We Start</div>
+  <h2 class="headline">One-Time Setup Requirements</h2>
+  <p class="lede">Before any outsourced party can take over execution, the brand, website readiness, social channels, and email infrastructure need to be in place. This is a one-time investment, completed before the monthly retainer begins.</p>
+
+  <div class="work-list">
+    <div class="work-row">
+      <span class="work-tag">Branding</span>
+      <div><div class="desc-title">Define brand identity &amp; positioning</div><div class="desc-sub">Tone of voice, visual identity, USPs and target customer — agreed on paper before any content gets made.</div></div>
+      <div class="phase-label">Setup Phase</div>
+    </div>
+    <div class="work-row">
+      <span class="work-tag">Website</span>
+      <div><div class="desc-title">Website marketing &amp; conversion review</div><div class="desc-sub">A pass on the built website to check it's ready to convert traffic — copy, flow, trust signals.</div></div>
+      <div class="phase-label">Setup Phase</div>
+    </div>
+    <div class="work-row">
+      <span class="work-tag">Social</span>
+      <div><div class="desc-title">Social media account setup</div><div class="desc-sub">Instagram and Facebook created, connected, and ready to publish.</div></div>
+      <div class="phase-label">Setup Phase</div>
+    </div>
+    <div class="work-row">
+      <span class="work-tag">Social</span>
+      <div><div class="desc-title">First content batch produced</div><div class="desc-sub">An initial wave of content so the channels have something to post from day one.</div></div>
+      <div class="phase-label">Month 1</div>
+    </div>
+    <div class="work-row">
+      <span class="work-tag">Email</span>
+      <div><div class="desc-title">Klaviyo flows built</div><div class="desc-sub">Welcome, abandoned cart, post-delivery, and win-back flows — built and tested.</div></div>
+      <div class="phase-label">Month 1</div>
+    </div>
+  </div>
+
+  <div class="work-total-strip">
+    <div class="label">One-Time Setup Investment</div>
+    <div class="amount">€4,000</div>
+  </div>
+</section>
+
+<!-- ============ RETAINER ============ -->
+<section class="section-bg-wide" id="retainer">
+  <div class="section">
+    <div class="eyebrow"><span class="num">04</span>The Monthly Investment</div>
+    <h2 class="headline">Monthly Retainer Breakdown</h2>
+    <p class="lede">The first four months are intentionally front-loaded — full agency onboarding, active paid media spend, and close oversight while the model is validated. This is not the long-term run-rate: the chart below also shows how the retainer is expected to decrease from month 5 onward as automation is introduced.</p>
+
+    <div class="retainer-shell">
+      <div class="donut-wrap">
+        <svg viewBox="0 0 100 100" width="280" height="280" style="transform: rotate(-90deg);">
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#E7EAF0" stroke-width="14"/>
+          <!-- Strategy 5000 / 18500 = 27% -->
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#0B1F3A" stroke-width="14"
+            stroke-dasharray="67.9 183.4" stroke-dashoffset="0" stroke-linecap="butt"/>
+          <!-- Media Buying 5000 / 18500 = 27% -->
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#2563EB" stroke-width="14"
+            stroke-dasharray="67.9 183.4" stroke-dashoffset="-67.9" stroke-linecap="butt"/>
+          <!-- Ad Budget 3000 / 18500 = 16.2% -->
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#60A5FA" stroke-width="14"
+            stroke-dasharray="40.7 183.4" stroke-dashoffset="-135.8" stroke-linecap="butt"/>
+          <!-- SMM 3000 / 18500 = 16.2% -->
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#93C5FD" stroke-width="14"
+            stroke-dasharray="40.7 183.4" stroke-dashoffset="-176.5" stroke-linecap="butt"/>
+          <!-- Content 2500 / 18500 = 13.5% -->
+          <circle cx="50" cy="50" r="40" fill="none" stroke="#BFDBFE" stroke-width="14"
+            stroke-dasharray="34 183.4" stroke-dashoffset="-217.2" stroke-linecap="butt"/>
+        </svg>
+        <div class="donut-center">
+          <div class="amt">€18.5k</div>
+          <div class="lbl">per month</div>
+        </div>
+      </div>
+
+      <div class="legend-list">
+        <div class="legend-row">
+          <div class="legend-swatch" style="background:#0B1F3A;"></div>
+          <div><div class="legend-name">Strategy &amp; Management</div><div class="legend-sub">In-house — oversight, reporting, agency management</div></div>
+          <div class="legend-amt">€5,000</div>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background:#2563EB;"></div>
+          <div><div class="legend-name">Media Buying Agency</div><div class="legend-sub">Meta campaign management &amp; optimisation</div></div>
+          <div class="legend-amt">€5,000</div>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background:#60A5FA;"></div>
+          <div><div class="legend-name">Meta Ad Budget</div><div class="legend-sub">Actual paid media spend</div></div>
+          <div class="legend-amt">€3,000</div>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background:#93C5FD;"></div>
+          <div><div class="legend-name">Social Media Management</div><div class="legend-sub">2 posts/week, comment &amp; DM handling</div></div>
+          <div class="legend-amt">€3,000</div>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background:#BFDBFE;"></div>
+          <div><div class="legend-name">Content Production</div><div class="legend-sub">20 videos (€100 each) + video editor</div></div>
+          <div class="legend-amt">€2,500</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BAR CHART: Full cost composition, Months 1-4 (validation) vs Months 5-7 (automation) -->
+    <div class="barchart-card">
+      <div class="barchart-head">
+        <div>
+          <h4>Monthly Cost Composition — Validation Period vs. Post-Automation</h4>
+          <div class="sub">Each bar shows where the monthly retainer is actually spent. From month 5, automation begins reducing the agency-dependent line items.</div>
+        </div>
+        <div class="barchart-legend">
+          <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#0B1F3A;"></span>Strategy &amp; Management</div>
+          <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#2563EB;"></span>Media Buying Agency</div>
+          <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#93C5FD;"></span>Social Media Mgmt</div>
+          <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#BFDBFE;"></span>Content Production</div>
+          <div class="barchart-legend-item"><span class="barchart-legend-swatch" style="background:#60A5FA;"></span>Meta Ad Budget</div>
+        </div>
+      </div>
+
+      <div class="barchart-phase-row">
+        <div></div>
+        <div class="barchart-phase-labels">
+          <div class="phase-tag-group">Validation Period — Full Outsourcing</div>
+          <div class="phase-divider-spacer"></div>
+          <div class="phase-tag-group automation" style="grid-column: span 3;">Post-Automation</div>
+        </div>
+      </div>
+
+      <div class="barchart-area">
+        <div class="barchart-yaxis">
+          <span>€20k</span><span>€15k</span><span>€10k</span><span>€5k</span><span>€0</span>
+        </div>
+        <div class="barchart-bars">
+          <div class="barchart-gridline" style="bottom:0%;"></div>
+          <div class="barchart-gridline" style="bottom:25%;"></div>
+          <div class="barchart-gridline" style="bottom:50%;"></div>
+          <div class="barchart-gridline" style="bottom:75%;"></div>
+          <div class="barchart-gridline" style="bottom:100%;"></div>
+
+          <!-- Month 1 — Strategy 5000 / Media 5000 / SMM 3000 / Content 2500 / Ads 3000 = 18500 -->
+          <div class="bar-column">
+            <div class="bar-total-label">€18,500</div>
+            <div class="bar-stack" style="height:231px;">
+              <div class="bar-seg" style="height:27.0%; background:#0B1F3A;"></div>
+              <div class="bar-seg" style="height:27.0%; background:#2563EB;"></div>
+              <div class="bar-seg" style="height:16.2%; background:#93C5FD;"></div>
+              <div class="bar-seg" style="height:13.5%; background:#BFDBFE;"></div>
+              <div class="bar-seg" style="height:16.3%; background:#60A5FA;"></div>
+            </div>
+          </div>
+          <!-- Month 2 -->
+          <div class="bar-column">
+            <div class="bar-total-label">€18,500</div>
+            <div class="bar-stack" style="height:231px;">
+              <div class="bar-seg" style="height:27.0%; background:#0B1F3A;"></div>
+              <div class="bar-seg" style="height:27.0%; background:#2563EB;"></div>
+              <div class="bar-seg" style="height:16.2%; background:#93C5FD;"></div>
+              <div class="bar-seg" style="height:13.5%; background:#BFDBFE;"></div>
+              <div class="bar-seg" style="height:16.3%; background:#60A5FA;"></div>
+            </div>
+          </div>
+          <!-- Month 3 -->
+          <div class="bar-column">
+            <div class="bar-total-label">€18,500</div>
+            <div class="bar-stack" style="height:231px;">
+              <div class="bar-seg" style="height:27.0%; background:#0B1F3A;"></div>
+              <div class="bar-seg" style="height:27.0%; background:#2563EB;"></div>
+              <div class="bar-seg" style="height:16.2%; background:#93C5FD;"></div>
+              <div class="bar-seg" style="height:13.5%; background:#BFDBFE;"></div>
+              <div class="bar-seg" style="height:16.3%; background:#60A5FA;"></div>
+            </div>
+          </div>
+          <!-- Month 4 -->
+          <div class="bar-column">
+            <div class="bar-total-label">€18,500</div>
+            <div class="bar-stack" style="height:231px;">
+              <div class="bar-seg" style="height:27.0%; background:#0B1F3A;"></div>
+              <div class="bar-seg" style="height:27.0%; background:#2563EB;"></div>
+              <div class="bar-seg" style="height:16.2%; background:#93C5FD;"></div>
+              <div class="bar-seg" style="height:13.5%; background:#BFDBFE;"></div>
+              <div class="bar-seg" style="height:16.3%; background:#60A5FA;"></div>
+            </div>
+          </div>
+
+          <div class="chart-divider"></div>
+
+          <!-- Month 5 — Strategy 5000 / Media 5000 / SMM 1500 / Content 1000 / Ads 3500 = 16000 -->
+          <div class="bar-column">
+            <div class="bar-total-label lower">€16,000</div>
+            <div class="bar-stack" style="height:200px;">
+              <div class="bar-seg" style="height:31.3%; background:#0B1F3A;"></div>
+              <div class="bar-seg" style="height:31.3%; background:#2563EB;"></div>
+              <div class="bar-seg" style="height:9.4%; background:#93C5FD;"></div>
+              <div class="bar-seg" style="height:6.2%; background:#BFDBFE;"></div>
+              <div class="bar-seg" style="height:21.8%; background:#60A5FA;"></div>
+            </div>
+          </div>
+          <!-- Month 6 — Strategy 4500 / Media 4000 / SMM 1000 / Content 750 / Ads 4000 = 14250 -->
+          <div class="bar-column">
+            <div class="bar-total-label lower">€14,250</div>
+            <div class="bar-stack" style="height:178px;">
+              <div class="bar-seg" style="height:31.6%; background:#0B1F3A;"></div>
+              <div class="bar-seg" style="height:28.1%; background:#2563EB;"></div>
+              <div class="bar-seg" style="height:7.0%; background:#93C5FD;"></div>
+              <div class="bar-seg" style="height:5.3%; background:#BFDBFE;"></div>
+              <div class="bar-seg" style="height:28.0%; background:#60A5FA;"></div>
+            </div>
+          </div>
+          <!-- Month 7 — Strategy 4000 / Media 3500 / SMM 750 / Content 500 / Ads 4500 = 13250 -->
+          <div class="bar-column">
+            <div class="bar-total-label lower">€13,250</div>
+            <div class="bar-stack" style="height:166px;">
+              <div class="bar-seg" style="height:30.2%; background:#0B1F3A;"></div>
+              <div class="bar-seg" style="height:26.4%; background:#2563EB;"></div>
+              <div class="bar-seg" style="height:5.7%; background:#93C5FD;"></div>
+              <div class="bar-seg" style="height:3.8%; background:#BFDBFE;"></div>
+              <div class="bar-seg" style="height:34.0%; background:#60A5FA;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="barchart-xaxis">
+        <div></div>
+        <div class="barchart-xlabels">
+          <div>Month 1</div>
+          <div>Month 2</div>
+          <div>Month 3</div>
+          <div>Month 4</div>
+          <div class="xspacer"></div>
+          <div>Month 5</div>
+          <div>Month 6</div>
+          <div>Month 7</div>
+        </div>
+      </div>
+
+      <div class="barchart-footnote">
+        <strong>Reading the automation effect:</strong> Social Media Management and Content Production are the two line items automation targets first — both shrink steadily from month 5 onward as AI-driven workflows take over routine posting, captioning, and editing tasks. Strategy and Media Buying stay largely intact, since campaign judgement and account oversight remain human-led. The freed-up budget is partially reallocated into Meta Ad Budget, increasing paid reach while still lowering the total monthly retainer.
+      </div>
+    </div>
+
+    <!-- DETAILED COST TABLE -->
+    <div class="detail-table-wrap">
+      <table class="detail-table">
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th>Cost Type</th>
+            <th>Description</th>
+            <th class="num">Monthly Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Strategy &amp; Management</td>
+            <td><span class="row-type fixed">Fixed</span></td>
+            <td>In-house oversight — agency management, reporting, weekly performance review with Jack &amp; John</td>
+            <td class="num">€5,000</td>
+          </tr>
+          <tr>
+            <td>Media Buying Agency</td>
+            <td><span class="row-type fixed">Fixed</span></td>
+            <td>Meta campaign setup, structuring, ongoing optimisation, and performance reporting</td>
+            <td class="num">€5,000</td>
+          </tr>
+          <tr>
+            <td>Social Media Management</td>
+            <td><span class="row-type fixed">Fixed</span></td>
+            <td>2 posts per week, comment and DM management across Instagram and Facebook</td>
+            <td class="num">€3,000</td>
+          </tr>
+          <tr>
+            <td>Content Production</td>
+            <td><span class="row-type fixed">Fixed</span></td>
+            <td>20 videos per month at €100 each, plus a dedicated video editor</td>
+            <td class="num">€2,500</td>
+          </tr>
+          <tr>
+            <td>Meta Ad Budget</td>
+            <td><span class="row-type variable">Variable</span></td>
+            <td>Actual paid media spend on Instagram and Facebook — scales with performance</td>
+            <td class="num">€3,000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total Monthly Retainer (Months 1–4)</td>
+            <td class="num">€18,500</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div style="margin-top:1rem; margin-bottom:0.5rem; font-size:0.78rem; font-weight:700; color:var(--blue); letter-spacing:0.04em; text-transform:uppercase;">After Automation — Months 5 to 7 (Indicative)</div>
+    <div class="detail-table-wrap" style="margin-top:0;">
+      <table class="detail-table">
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th>Month 5</th>
+            <th>Month 6</th>
+            <th>Month 7</th>
+            <th class="num">Change vs. Month 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Strategy &amp; Management</td>
+            <td class="num">€5,000</td>
+            <td class="num">€4,500</td>
+            <td class="num">€4,000</td>
+            <td class="num" style="color:var(--green);">− €1,000</td>
+          </tr>
+          <tr>
+            <td>Media Buying Agency</td>
+            <td class="num">€5,000</td>
+            <td class="num">€4,000</td>
+            <td class="num">€3,500</td>
+            <td class="num" style="color:var(--green);">− €1,500</td>
+          </tr>
+          <tr>
+            <td>Social Media Management</td>
+            <td class="num">€1,500</td>
+            <td class="num">€1,000</td>
+            <td class="num">€750</td>
+            <td class="num" style="color:var(--green);">− €2,250</td>
+          </tr>
+          <tr>
+            <td>Content Production</td>
+            <td class="num">€1,000</td>
+            <td class="num">€750</td>
+            <td class="num">€500</td>
+            <td class="num" style="color:var(--green);">− €2,000</td>
+          </tr>
+          <tr>
+            <td>Meta Ad Budget</td>
+            <td class="num">€3,500</td>
+            <td class="num">€4,000</td>
+            <td class="num">€4,500</td>
+            <td class="num" style="color:var(--navy);">+ €1,500</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total Monthly Retainer</td>
+            <td class="num">€16,000</td>
+            <td class="num">€14,250</td>
+            <td class="num">€13,250</td>
+            <td class="num" style="color:var(--green);">− €5,250 by Month 7</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="section" id="investment">
+  <div class="eyebrow"><span class="num">05</span>Total Investment</div>
+  <h2 class="headline">Total Required Investment</h2>
+  <p class="lede">Setup plus four months of retainer gives the full starting capital needed to launch, run, and validate the marketing engine before any scaling or automation decision.</p>
+
+  <div class="buildup">
+    <div class="buildup-card">
+      <div class="k">One-Time Setup</div>
+      <div class="v">€4,000</div>
+    </div>
+    <div class="buildup-op">+</div>
+    <div class="buildup-card">
+      <div class="k">€18,500 × 4 Months</div>
+      <div class="v">€74,000</div>
+    </div>
+    <div class="buildup-op">=</div>
+    <div class="buildup-card result">
+      <div class="k">Total Starting Capital</div>
+      <div class="v">€78,000</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DECISION BANNER ============ -->
+<div class="decision-banner">
+  <div class="eyebrow"><span class="num"></span>Why This Period Matters</div>
+  <h2>By the end of month four, the model will be validated on real performance data.</h2>
+  <p>Each outsourcing partner will have completed a full operating cycle by that point. Performance data on sales, subscriber retention, and acquisition cost will determine whether the model is scaled, adjusted, or paused — based on evidence rather than assumptions.</p>
+</div>
+
+<!-- ============ FUTURE PHASE ============ -->
+<section class="section" id="future">
+  <div class="eyebrow"><span class="num">06</span>Beyond Month 4 — If We Continue</div>
+  <h2 class="headline">Long-Term Automation Opportunity</h2>
+  <p class="lede">If the four-month test validates the model, the next step is automating parts of the work — which reduces dependency on certain outsourced parties and lowers the recurring retainer, as shown in the month 5–7 projection above. Not every task can be automated; the table below sets out exactly which ones can, and what each costs to build.</p>
+
+  <div class="future-shell">
+    <div class="future-card">
+      <span class="ftag">One-Time Investment</span>
+      <h4>Automation Build-Out</h4>
+      <p>Designing and implementing AI agents and automated workflows across content creation, influencer marketing, email &amp; support, and reporting.</p>
+      <div class="amt">€26,000</div>
+    </div>
+    <div class="future-card">
+      <span class="ftag">Ongoing Effect — Indicative</span>
+      <h4>Effect on Monthly Retainer</h4>
+      <p>Based on the projection above, the retainer is expected to fall from €18,500 to approximately €13,250 by month 7 — a reduction of roughly 28%. Figures are indicative until automation scope is finalised.</p>
+      <div class="amt tbd">↓ €18,500 → ~€13,250 / month</div>
+    </div>
+  </div>
+
+  <div class="automation-table-wrap">
+    <table class="automation-table">
+      <thead>
+        <tr>
+          <th style="width:14%;">Category</th>
+          <th>Task</th>
+          <th style="width:11%;">Automatable</th>
+          <th style="width:16%;">Automation Type</th>
+          <th class="num" style="width:13%;">Time Saved</th>
+          <th class="num" style="width:14%;">Build Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cat-label">Strategy</td>
+          <td>Marketing strategy &amp; coordination<div class="task-sub">Planning, priorities, weekly direction-setting</div></td>
+          <td><span class="auto-flag no">Not Automatable</span></td>
+          <td>—</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Social Media</td>
+          <td>Content strategy<div class="task-sub">Pillars, seasonal calendar, monthly themes</div></td>
+          <td><span class="auto-flag no">Not Automatable</span></td>
+          <td>—</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Social Media</td>
+          <td>Content creation &amp; management<div class="task-sub">~2 posts/week incl. creation, scheduling, publishing, UGC sourcing</div></td>
+          <td><span class="auto-flag yes">Automatable</span></td>
+          <td>AI Agent</td>
+          <td class="num">TBD</td>
+          <td class="num">€4,000</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Influencer</td>
+          <td>Influencer marketing<div class="task-sub">NL micro-influencer outreach &amp; coordination, roughly 1 day/week of work</div></td>
+          <td><span class="auto-flag yes">Automatable</span></td>
+          <td>AI Agent</td>
+          <td class="num">TBD</td>
+          <td class="num">€8,500</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Email</td>
+          <td>Email management &amp; campaigns<div class="task-sub">Newsletter, campaigns, customer support replies</div></td>
+          <td><span class="auto-flag yes">Automatable</span></td>
+          <td>AI Agent + Support Bot</td>
+          <td class="num">TBD</td>
+          <td class="num">€5,500</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Meta Ads</td>
+          <td>Meta ad management &amp; optimisation<div class="task-sub">Setup, testing, evaluation, optimisation, CAC monitoring</div></td>
+          <td><span class="auto-flag no">Not Automatable</span></td>
+          <td>—</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+        </tr>
+        <tr>
+          <td class="cat-label">Reporting</td>
+          <td>Reporting, analysis &amp; admin<div class="task-sub">Monthly report, weekly updates, analysis, action points</div></td>
+          <td><span class="auto-flag optional">Optional</span></td>
+          <td>AI Dashboard</td>
+          <td class="num">TBD</td>
+          <td class="num">€8,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Total Automation Build-Out</td>
+          <td class="num">TBD</td>
+          <td class="num">€26,000</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <p>Dutch Flower Club — Marketing Proposal</p>
+  <p>Confidential — Prepared for Internal Review</p>
+</footer>
+
+</body>
+</html>
