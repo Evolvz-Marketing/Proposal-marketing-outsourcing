@@ -524,6 +524,90 @@
   }
   footer p { font-size: 0.75rem; color: var(--ink-soft); }
 
+
+  /* ── DELIVERABLES ── */
+  .deliverable-list {
+    margin-top: 0.75rem;
+    display: flex; flex-direction: column; gap: 0.3rem;
+  }
+  .deliverable-item {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 0.8rem; color: var(--ink-mid); line-height: 1.5;
+  }
+  .deliverable-item::before {
+    content: '→';
+    color: var(--blue); font-weight: 600; flex-shrink: 0; margin-top: 0;
+  }
+
+  /* ── WATERMARK ── */
+  .watermark {
+    position: fixed; bottom: 18px; right: 22px;
+    display: flex; align-items: center; gap: 7px;
+    opacity: 0.18; pointer-events: none; z-index: 999;
+  }
+  .watermark-logo {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800; font-size: 0.75rem;
+    color: var(--navy); letter-spacing: 0.04em;
+  }
+  .watermark-sub {
+    font-size: 0.65rem; color: var(--ink-soft); font-weight: 500;
+  }
+  .watermark-e {
+    width: 22px; height: 22px; background: var(--navy);
+    border-radius: 4px; display: flex; align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif; font-weight: 800;
+    font-size: 0.75rem; color: #fff;
+  }
+
+  /* section watermarks */
+  .section-wm {
+    position: absolute; bottom: 16px; right: 20px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.6rem; font-weight: 600;
+    color: var(--navy); opacity: 0.07;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    pointer-events: none; user-select: none;
+  }
+
+  /* ── RISK TABLE ── */
+  .risk-section { padding: 5.5rem 4rem; position: relative; }
+  .risk-table-wrap { margin-top: 2rem; }
+  .risk-table {
+    width: 100%; border-collapse: collapse;
+    border: 1px solid var(--line);
+  }
+  .risk-table thead th {
+    background: var(--navy); color: #fff;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    text-align: left; padding: 0.9rem 1.2rem;
+  }
+  .risk-table tbody td {
+    padding: 1.2rem 1.2rem; font-size: 0.85rem;
+    border-bottom: 1px solid var(--line); vertical-align: top;
+    line-height: 1.6;
+  }
+  .risk-table tbody tr:last-child td { border-bottom: none; }
+  .risk-table tbody tr:nth-child(even) td { background: var(--paper-dim); }
+  .risk-label {
+    font-weight: 600; color: var(--navy);
+    margin-bottom: 3px; font-size: 0.87rem;
+  }
+  .risk-sub { font-size: 0.8rem; color: var(--ink-soft); }
+  .risk-impact {
+    display: inline-block; font-size: 0.7rem; font-weight: 700;
+    padding: 2px 8px; border-radius: 2px;
+  }
+  .risk-impact.high { background: #FEE2E2; color: #B91C1C; }
+  .risk-impact.medium { background: #FEF3C7; color: #92400E; }
+  .risk-table .cost-cell {
+    font-weight: 700; color: var(--navy);
+    font-size: 0.87rem; white-space: nowrap;
+  }
+  .risk-table .cost-cell.none { color: var(--ink-soft); font-weight: 400; }
+
 </style>
 </head>
 <body>
@@ -537,6 +621,7 @@
     <li><a href="#retainer">Monthly Costs</a></li>
     <li><a href="#future">What's Next</a></li>
     <li><a href="#investment">Investment</a></li>
+    <li><a href="#risk">Risk</a></li>
   </ul>
 </nav>
 
@@ -591,29 +676,35 @@
     <h2 class="headline">Four-Month Implementation Timeline</h2>
     <p class="lede">Each month has one job. The next phase only starts once the previous one is actually done - this is deliberately sequential, not four months of parallel guessing.</p>
 
-    <div class="flow-track">
+    <div class="flow-track" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="flow-card" style="background:#F9FAFB;">
+        <div class="flow-step-num">0</div>
+        <h4>Build &amp; Set Up</h4>
+        <p>Brand identity session, website review, social channels created, content shoot on location, and email flows built. Everything in place before month 1 begins.</p>
+        <span class="flow-month-label">Month 0</span>
+      </div>
       <div class="flow-card is-current">
         <div class="flow-step-num">1</div>
-        <h4>Build &amp; Set Up</h4>
-        <p>Social channels, ad accounts, content production, and influencer outreach are all built from zero. Influencer sourcing alone is a real time investment.</p>
+        <h4>Launch</h4>
+        <p>Website goes live. First content published. Influencers post. Giveaway runs. Meta ads start. All channels fire simultaneously as a coordinated launch.</p>
         <span class="flow-month-label">Month 1</span>
       </div>
       <div class="flow-card">
         <div class="flow-step-num">2</div>
         <h4>Bring In The Specialists</h4>
-        <p>Outsourcing partners come on board across social, paid media, and content - and get aligned to one shared strategy and brand.</p>
+        <p>Outsourcing partners onboarded across social, paid media, and content. Everyone aligned to one strategy. First campaigns running and optimised.</p>
         <span class="flow-month-label">Month 2</span>
       </div>
       <div class="flow-card">
         <div class="flow-step-num">3</div>
-        <h4>First Customers</h4>
-        <p>Focus shifts to acquiring the first subscribers - and keeping them, since this is a recurring subscription model. First real data starts coming in.</p>
+        <h4>First Customers &amp; Data</h4>
+        <p>Focus shifts to acquiring the first customers and keeping them. Real performance data starts coming in - CAC, retention, ad performance all measured.</p>
         <span class="flow-month-label">Month 3</span>
       </div>
       <div class="flow-card">
         <div class="flow-step-num">4</div>
-        <h4>Analyse &amp; Scale</h4>
-        <p>Month 3 data gets reviewed in full. Budget and strategy adjust based on what's actually working - this is where scaling decisions get made on evidence.</p>
+        <h4>Analyse, Scale &amp; Decide</h4>
+        <p>All month 3 data reviewed in full. Campaigns scaled on what works. End of month 4 is the formal decision point - continue, adjust, or begin automation.</p>
         <span class="flow-month-label">Month 4</span>
       </div>
     </div>
@@ -629,27 +720,62 @@
   <div class="work-list">
     <div class="work-row">
       <span class="work-tag">Branding</span>
-      <div><div class="desc-title">Brand identity, positioning &amp; strategy session</div><div class="desc-sub">We sit down together to review the brand, discuss positioning, and write everything out in full - tone of voice, visual identity, USPs, target customer. Done collaboratively in a dedicated session so that feedback is incorporated from day one. This foundation is essential for building a strong offer for customers and ensuring every channel tells the same story.</div></div>
+      <div>
+        <div class="desc-title">Brand Identity &amp; Positioning Session</div>
+        <div class="desc-sub">A dedicated working session where we sit down together to review the brand, challenge assumptions, and write everything out in full. All feedback is incorporated on the spot.</div>
+        <div class="deliverable-list">
+          <div class="deliverable-item">Brand Identity Document (tone of voice, visual direction, logo usage)</div>
+          <div class="deliverable-item">Positioning Statement &amp; USP Framework</div>
+          <div class="deliverable-item">Target Customer Profile &amp; Market Overview</div>
+          <div class="deliverable-item">Competitor Positioning Map</div>
+        </div>
+      </div>
       <div class="phase-label">Setup Phase</div>
     </div>
     <div class="work-row">
       <span class="work-tag">Website</span>
-      <div><div class="desc-title">Conversion Optimisation Review</div><div class="desc-sub">A pass on the built website to check it's ready to convert traffic - copy, flow, trust signals.</div></div>
+      <div>
+        <div class="desc-title">Conversion Optimisation Review</div>
+        <div class="desc-sub">A structured review of the live website against conversion best practices - copy clarity, page flow, trust signals, and subscription journey.</div>
+        <div class="deliverable-list">
+          <div class="deliverable-item">Website Review Report (written assessment per page)</div>
+          <div class="deliverable-item">Conversion Scoring Sheet (weighted template across 12 criteria)</div>
+          <div class="deliverable-item">Priority Action List with recommended fixes</div>
+        </div>
+      </div>
       <div class="phase-label">Setup Phase</div>
     </div>
     <div class="work-row">
       <span class="work-tag">Social</span>
-      <div><div class="desc-title">Social media account setup</div><div class="desc-sub">Instagram and Facebook created, connected, and ready to publish.</div></div>
+      <div><div class="desc-title">Social Media Account Setup</div><div class="desc-sub">Instagram and Facebook business profiles created, connected via Meta Business Suite, and ready to publish on both platforms simultaneously.</div></div>
       <div class="phase-label">Setup Phase</div>
     </div>
     <div class="work-row">
       <span class="work-tag">Social</span>
-      <div><div class="desc-title">Launch content shoot - on location</div><div class="desc-sub">A full on-location shoot to introduce the brand - who you are, what you do, and why. Delivers 10 professional photos and 8 short-form videos ready for social media from day one. This content forms the foundation of the brand's visual identity and covers the first weeks of posting.</div></div>
+      <div>
+        <div class="desc-title">Launch Content Shoot — On Location</div>
+        <div class="desc-sub">A full on-location shoot day to introduce the brand visually. Every moment is scripted and planned in advance so no time is wasted on the day.</div>
+        <div class="deliverable-list">
+          <div class="deliverable-item">Shot List &amp; Run-of-Day Schedule (who does what, when)</div>
+          <div class="deliverable-item">Video Scripts (8 short-form videos — intro, product, story, lifestyle)</div>
+          <div class="deliverable-item">10 Professional Brand Photos (product + lifestyle, edited)</div>
+          <div class="deliverable-item">8 Short-Form Videos (edited, ready to publish on day one)</div>
+        </div>
+      </div>
       <div class="phase-label">Setup Phase</div>
     </div>
     <div class="work-row">
       <span class="work-tag">Email</span>
-      <div><div class="desc-title">Klaviyo flows built</div><div class="desc-sub">Welcome, abandoned cart, post-delivery, and win-back flows - built and tested.</div></div>
+      <div>
+        <div class="desc-title">Klaviyo Email Flow Setup</div>
+        <div class="desc-sub">Core automated email flows built, connected to the website, and tested before launch. No manual sending required after setup.</div>
+        <div class="deliverable-list">
+          <div class="deliverable-item">Welcome Flow (brand intro, what to expect)</div>
+          <div class="deliverable-item">Abandoned Cart Flow (2-email recovery sequence)</div>
+          <div class="deliverable-item">Post-Delivery Flow (review request + referral prompt)</div>
+          <div class="deliverable-item">Win-Back Flow (re-engagement for cancelled subscribers)</div>
+        </div>
+      </div>
       <div class="phase-label">Setup Phase</div>
     </div>
   </div>
@@ -661,14 +787,15 @@
 </section>
 
 <!-- ============ RETAINER ============ -->
-<section class="section-bg-wide" id="retainer">
+<section class="section-bg-wide" id="retainer" style="position:relative;">
+  <div class="section-wm">Evolvz Marketing</div>
   <div class="section">
     <div class="eyebrow"><span class="num">04</span>The Monthly Investment</div>
     <h2 class="headline">Monthly Cost Breakdown</h2>
     <p class="lede">The first four months are intentionally front-loaded - full agency onboarding, active paid media spend, and close oversight while the model is validated. This is not the long-term run-rate: the chart below also shows how the fixed costs are expected to decrease from month 5 onward as automation is introduced.</p>
 
     <div style="background:#F0F5FF;border:1px solid var(--blue-light);border-left:3px solid var(--blue);border-radius:8px;padding:0.9rem 1.2rem;margin-bottom:2rem;font-size:0.85rem;color:var(--ink-soft);line-height:1.65;">
-      <strong style="color:var(--navy);">Note on Meta Ad Budget:</strong> The ad budget starts at €3,000 per month. This is the minimum to properly test and gather data. As performance data comes in and campaigns prove results, this budget is expected to increase - more ad spend goes directly into scaling subscriber acquisition with no increase in fixed overhead.
+      <strong style="color:var(--navy);">Note on Meta Ad Budget:</strong> The ad budget starts at €3,000 per month. This is the minimum to properly test and gather data. As performance data comes in and campaigns prove results, this budget is expected to increase - more ad spend goes directly into scaling customer acquisition with no increase in fixed overhead.
     </div>
 
     <div class="retainer-shell">
@@ -720,7 +847,7 @@
         </div>
         <div class="legend-row">
           <div class="legend-swatch" style="background:#CA8A04;"></div>
-          <div><div class="legend-name">Content Production</div><div class="legend-sub">20 influencer videos/month at €100 each, incl. video editing</div></div>
+          <div><div class="legend-name">Content Production</div><div class="legend-sub">Between 5 and 20 influencer videos per month depending on influencer size and availability, incl. video editing</div></div>
           <div class="legend-amt">€3,000</div>
         </div>
       </div>
@@ -826,11 +953,11 @@
           <div class="bar-column">
             <div class="tbd-pill">↓ Est.</div>
             <div class="bar-stack" style="height:219px;">
-              <div class="bar-seg" style="height:23.5%; background:#1D4ED8; opacity:0.8;"></div>
+              <div class="bar-seg" style="height:26.5%; background:#1D4ED8; opacity:0.85;"></div>
               <div class="bar-seg" style="height:17.6%; background:#DC2626;"></div>
-              <div class="bar-seg" style="height:44.1%; background:#7C3AED;"></div>
-              <div class="bar-seg" style="height:8.8%; background:#16A34A; opacity:0.75;"></div>
-              <div class="bar-seg" style="height:5.9%; background:#CA8A04; opacity:0.75;"></div>
+              <div class="bar-seg" style="height:8.8%; background:#16A34A; opacity:0.7;"></div>
+              <div class="bar-seg" style="height:17.6%; background:#CA8A04;"></div>
+              <div class="bar-seg" style="height:29.4%; background:#7C3AED;"></div>
             </div>
           </div>
           <!--
@@ -840,11 +967,11 @@
           <div class="bar-column">
             <div class="tbd-pill">↓ Est.</div>
             <div class="bar-stack" style="height:219px;">
-              <div class="bar-seg" style="height:20.6%; background:#1D4ED8; opacity:0.7;"></div>
+              <div class="bar-seg" style="height:23.5%; background:#1D4ED8; opacity:0.75;"></div>
               <div class="bar-seg" style="height:17.6%; background:#DC2626;"></div>
-              <div class="bar-seg" style="height:51.5%; background:#7C3AED;"></div>
-              <div class="bar-seg" style="height:5.9%; background:#16A34A; opacity:0.65;"></div>
-              <div class="bar-seg" style="height:4.4%; background:#CA8A04; opacity:0.65;"></div>
+              <div class="bar-seg" style="height:4.4%; background:#16A34A; opacity:0.6;"></div>
+              <div class="bar-seg" style="height:17.6%; background:#CA8A04;"></div>
+              <div class="bar-seg" style="height:36.8%; background:#7C3AED;"></div>
             </div>
           </div>
           <!--
@@ -854,11 +981,11 @@
           <div class="bar-column">
             <div class="tbd-pill">↓ Est.</div>
             <div class="bar-stack" style="height:219px;">
-              <div class="bar-seg" style="height:17.6%; background:#1D4ED8; opacity:0.65;"></div>
+              <div class="bar-seg" style="height:23.5%; background:#1D4ED8; opacity:0.65;"></div>
               <div class="bar-seg" style="height:17.6%; background:#DC2626;"></div>
-              <div class="bar-seg" style="height:57.4%; background:#7C3AED;"></div>
-              <div class="bar-seg" style="height:4.4%; background:#16A34A; opacity:0.6;"></div>
-              <div class="bar-seg" style="height:2.9%; background:#CA8A04; opacity:0.6;"></div>
+              <div class="bar-seg" style="height:2.9%; background:#16A34A; opacity:0.5;"></div>
+              <div class="bar-seg" style="height:17.6%; background:#CA8A04;"></div>
+              <div class="bar-seg" style="height:38.2%; background:#7C3AED;"></div>
             </div>
           </div>
         </div>
@@ -881,7 +1008,7 @@
       </div>
 
       <div class="barchart-footnote">
-        <strong>Reading the composition shift from month 5:</strong> As automation replaces routine agency work, fixed costs for Strategy, Social Media Management, and Content Production decrease. This frees up budget that is reallocated entirely into Meta Ad Budget - increasing paid reach and scaling performance. The total monthly spend stays roughly stable, but the mix becomes significantly more variable and growth-oriented. Revenue is expected to continue rising as ad spend scales, since the subscription model means every retained customer adds to recurring income without increasing fixed costs. <strong>The post-month-4 breakdown is illustrative - exact figures depend on automation scope agreed at that stage.</strong>
+        <strong>Reading the composition shift from month 5:</strong> As automation replaces routine agency work, Social Media Management decreases significantly over time. Strategy reduces slightly. Content Production stays stable. This frees up budget that is reallocated entirely into Meta Ad Budget - increasing paid reach and scaling performance. The total monthly spend stays roughly stable, but the mix becomes significantly more variable and growth-oriented. Revenue is expected to continue rising as ad spend scales, since every retained customer adds directly to recurring income without increasing fixed overhead. <strong>The post-month-4 breakdown is illustrative - exact figures depend on automation scope agreed at that stage.</strong>
       </div>
     </div>
 
@@ -965,7 +1092,7 @@
   </div>
 </section>
 
-<section class="section" id="investment">
+<section class="section" id="investment" style="position:relative;">
   <div class="eyebrow"><span class="num">06</span>Total Investment</div>
   <h2 class="headline">Total Required Investment</h2>
   <p class="lede">Setup plus four months of fixed costs gives the full starting capital needed to launch, run, and validate the marketing engine before any scaling or automation decision.</p>
@@ -989,9 +1116,74 @@
 </section>
 
 
+
+
+<!-- WATERMARK -->
+<div class="watermark">
+  <div class="watermark-e">E</div>
+  <div>
+    <div class="watermark-logo">EVOLVZ</div>
+    <div class="watermark-sub">by Evolvz Marketing</div>
+  </div>
+</div>
+
+<!-- ============ RISK ANALYSIS ============ -->
+<section style="background:var(--paper-dim); padding:5.5rem 4rem; position:relative;" id="risk">
+  <div class="section-wm">Evolvz Marketing</div>
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="eyebrow">Risk Analysis</div>
+    <h2 class="headline">Known Risks, Consequences &amp; How We Prevent Them</h2>
+    <p class="lede">Every marketing engagement carries risk. The table below maps the three most relevant risks for this project, what happens if they materialise, and how we plan to prevent them — including any additional cost implications.</p>
+
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th style="width:22%;">Risk</th>
+          <th style="width:11%;">Severity</th>
+          <th style="width:27%;">Consequence</th>
+          <th style="width:28%;">Prevention &amp; Approach</th>
+          <th style="width:12%;">Additional Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="risk-label">Technical Infrastructure or Supply Chain Instability</div>
+            <div class="risk-sub">Website, payment, fulfilment, or delivery not reliable enough at launch</div>
+          </td>
+          <td><span class="risk-impact high">High</span></td>
+          <td>Poor first customer experience, negative reviews early on, churn before retention data is meaningful. Marketing spend wasted driving traffic to a broken experience.</td>
+          <td>Thorough pre-launch technical check across all systems. Proof delivery run across 3 separate regions in the Netherlands before going live. No marketing budget activated until operations are confirmed stable.</td>
+          <td class="cost-cell none">None</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="risk-label">Four Months Not Sufficient to Draw Conclusions</div>
+            <div class="risk-sub">Growth too slow or data too thin to make a confident scale decision by end of month 4</div>
+          </td>
+          <td><span class="risk-impact medium">Medium</span></td>
+          <td>Decision made with incomplete data, increasing the risk of scaling prematurely or stopping too early. Both are costly outcomes.</td>
+          <td>If data at end of month 4 is promising but inconclusive, the engagement can be extended by 2 months to gather sufficient volume for a confident decision. This option is decided at that point — not committed to upfront.</td>
+          <td class="cost-cell">€34,000<div style="font-size:0.75rem;font-weight:400;color:var(--ink-soft);margin-top:2px;">2-month extension (optional)</div></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="risk-label">Insufficient Alignment on Strategy &amp; Vision</div>
+            <div class="risk-sub">Internal disagreement on direction, or uncertainty whether the concept has real market fit</div>
+          </td>
+          <td><span class="risk-impact medium">Medium</span></td>
+          <td>Inconsistent execution across channels, wasted budget pursuing mixed goals, or launching a concept that hasn't been validated with real target customers before investing in marketing.</td>
+          <td>Before committing to the full marketing setup, a dedicated concept validation round is recommended — structured market research with target customers in the Netherlands to confirm demand, pricing sensitivity, and positioning. Coordinated together with a research partner.</td>
+          <td class="cost-cell">€2,000 – €5,000<div style="font-size:0.75rem;font-weight:400;color:var(--ink-soft);margin-top:2px;">Market research (optional, recommended)</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <footer>
-  <p>Dutch Flower Club - Marketing Proposal</p>
-  <p>Confidential - Prepared for Internal Review</p>
+  <p>Dutch Flower Club — Marketing Proposal</p>
+  <p>Confidential — Prepared for Internal Review by Evolvz Marketing</p>
 </footer>
 
 </body>
